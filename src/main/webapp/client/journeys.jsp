@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>All Routes | SwiftBus</title>
+  <title>All Journeys | LankaRails</title>
   <link rel="shortcut icon" href="${pageContext.request.contextPath}/client/assets/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,15 +25,15 @@
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900">All Bus Routes</h2>
+        <h2 class="text-3xl font-bold text-gray-900">All Train Journeys</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <c:forEach var="route" items="${routes}">
+        <c:forEach var="journey" items="${journeys}">
           <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300">
             <div class="px-6 py-5">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">${route.startLocation} → ${route.endLocation}</h3>
-              <p class="text-sm text-gray-700 mb-3">Ticket Price: <strong>Rs. ${route.ticketPrice}</strong></p>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">${journey.startStation} → ${journey.endStation}</h3>
+              <p class="text-sm text-gray-700 mb-3">Ticket Price: <strong>Rs. ${journey.ticketPrice}</strong></p>
             </div>
           </div>
         </c:forEach>

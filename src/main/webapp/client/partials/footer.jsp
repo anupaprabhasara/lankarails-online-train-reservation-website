@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!-- Footer for LankaRails -->
+<!-- Footer for LankaRails (Blue Themed) -->
 <footer class="bg-gray-800 text-white py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -8,7 +8,7 @@
       <!-- Brand Info -->
       <div>
         <div class="flex items-center space-x-2 mb-4">
-          <i class="fas fa-train text-2xl text-green-400"></i>
+          <i class="fas fa-train text-2xl text-blue-400"></i>
           <h3 class="text-xl font-bold">LankaRails</h3>
         </div>
         <p class="text-gray-400 text-sm leading-relaxed">
@@ -50,16 +50,16 @@
       <div>
         <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
         <div class="flex space-x-4">
-          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition">
+          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition">
+          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition">
+          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-green-600 hover:text-white transition">
+          <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>

@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Schedules | SwiftBus</title>
+  <title>Schedules | LankaRails</title>
   <link rel="shortcut icon" href="${pageContext.request.contextPath}/client/assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,12 +22,12 @@
   </c:otherwise>
 </c:choose>
 
-<section class="py-20 bg-gray-50">
+<section class="py-20 bg-blue-50">
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8 space-y-4 md:space-y-0">
-      <h2 class="text-3xl font-bold text-gray-900">Schedules</h2>
+      <h2 class="text-3xl font-bold text-blue-900">Train Schedules</h2>
       <input id="searchBar" type="text" placeholder="Search schedules..." 
-             class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 text-sm">
+             class="w-full md:w-1/3 px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-sm">
     </div>
 
     <!-- Feedback Messages -->
@@ -42,13 +42,13 @@
     <div id="scheduleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <c:forEach var="schedule" items="${schedules}">
         <div class="scheduleCard bg-white border border-gray-200 rounded-xl shadow-sm p-6 hover:shadow-lg transition-all duration-300">
-          <h3 class="text-xl font-bold text-gray-900 mb-2">${schedule.startLocation} → ${schedule.endLocation}</h3>
-          <p class="text-sm text-gray-600">Bus: ${schedule.busNumber}</p>
-          <p class="text-sm">Departure: ${schedule.startTime}</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">${schedule.startStation} → ${schedule.endStation}</h3>
+          <p class="text-sm text-gray-600">Train: ${schedule.trainNumber}</p>
+          <p class="text-sm">Departure: ${schedule.departureTime}</p>
           <p class="text-sm mb-4">Arrival: ${schedule.arrivalTime}</p>
           <p class="text-sm font-semibold">Price: Rs. ${schedule.ticketPrice}</p>
           <button onclick="openBookingModal(${schedule.scheduleId})"
-                  class="mt-4 w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                  class="mt-4 w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
             Book Now
           </button>
         </div>
@@ -65,7 +65,7 @@
 <!-- Booking Modal -->
 <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
   <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md relative">
-    <h3 class="text-xl font-bold mb-4">Book Your Seat</h3>
+    <h3 class="text-xl font-bold mb-4">Book Your Reservation</h3>
     <form id="bookingForm" action="${pageContext.request.contextPath}/schedules" method="post">
       <input type="hidden" name="action" value="book">
       <input type="hidden" name="scheduleId" id="modalScheduleId">
@@ -82,7 +82,7 @@
       </div>
       <div class="flex justify-end gap-2">
         <button type="button" onclick="closeBookingModal()" class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
-        <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Confirm</button>
+        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Confirm</button>
       </div>
     </form>
   </div>

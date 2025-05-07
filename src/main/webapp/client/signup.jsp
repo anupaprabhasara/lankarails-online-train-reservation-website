@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Signup | SwiftBus</title>
+  <title>Signup | LankaRails</title>
   <link rel="shortcut icon" href="${pageContext.request.contextPath}/client/assets/favicon.png" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,20 +13,20 @@
 
   <%@ include file="partials/navbar.jsp" %>
 
-  <section class="bg-gray-50 py-20">
+  <section class="bg-blue-50 py-20">
     <div class="container mx-auto px-4">
       <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg space-y-6">
         
         <!-- Branding -->
         <div class="text-center">
-          <a href="${pageContext.request.contextPath}/" class="text-3xl font-bold text-green-600 flex items-center justify-center space-x-2">
-            <i class="fas fa-bus-alt"></i>
-            <span>SwiftBus</span>
+          <a href="${pageContext.request.contextPath}/" class="text-3xl font-bold text-blue-600 flex items-center justify-center space-x-2">
+            <i class="fas fa-train"></i>
+            <span>LankaRails</span>
           </a>
           <h2 class="mt-4 text-2xl font-bold text-gray-900">Create a new account</h2>
           <p class="mt-2 text-sm text-gray-600">
             Already have an account?
-            <a href="${pageContext.request.contextPath}/login" class="font-medium text-green-600 hover:text-green-500">
+            <a href="${pageContext.request.contextPath}/login" class="font-medium text-blue-600 hover:text-blue-500">
               Sign in here
             </a>
           </p>
@@ -58,7 +58,7 @@
           <div>
             <label for="full_name" class="block text-sm font-medium text-gray-700">Full Name</label>
             <input id="full_name" name="full_name" type="text" required
-              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:ring-green-500 focus:border-green-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               placeholder="John Doe">
           </div>
 
@@ -66,15 +66,15 @@
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
             <input id="email" name="email" type="email" required
-              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:ring-green-500 focus:border-green-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               placeholder="you@example.com">
           </div>
 
           <!-- Phone -->
           <div>
             <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-            <input id="phone" name="phone" type="number" required
-              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:ring-green-500 focus:border-green-500 sm:text-sm"
+            <input id="phone" name="phone" type="text" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               placeholder="07XXXXXXXX">
           </div>
 
@@ -82,11 +82,11 @@
           <div>
             <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
             <input id="password" name="password" type="password" required
-              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:ring-green-500 focus:border-green-500 sm:text-sm"
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               placeholder="••••••••">
           </div>
 
-          <!-- Password Validation Hints -->
+          <!-- Password Hints -->
           <div id="password-hints" class="text-sm text-gray-600 space-y-1">
             <p id="lengthHint" class="flex items-center"><i class="fa fa-circle text-xs mr-2"></i> At least 8 characters</p>
             <p id="uppercaseHint" class="flex items-center"><i class="fa fa-circle text-xs mr-2"></i> At least one uppercase letter</p>
@@ -97,7 +97,7 @@
           <!-- Submit -->
           <div>
             <button type="submit"
-              class="w-full flex justify-center items-center space-x-2 px-4 py-2 text-sm font-semibold text-white bg-green-600 hover:bg-green-700 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-green-500">
+              class="w-full flex justify-center items-center space-x-2 px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-500">
               <i class="fas fa-user-plus"></i>
               <span>Sign up</span>
             </button>
@@ -109,7 +109,7 @@
 
   <%@ include file="partials/footer.jsp" %>
 
-  <!-- Password Live Validation Script -->
+  <!-- Live Validation Script -->
   <script>
     const passwordInput = document.getElementById("password");
 
@@ -121,16 +121,16 @@
     passwordInput.addEventListener("input", function () {
       const val = passwordInput.value;
 
-      lengthHint.classList.toggle("text-green-600", val.length >= 8);
+      lengthHint.classList.toggle("text-blue-600", val.length >= 8);
       lengthHint.classList.toggle("text-red-600", val.length < 8);
 
-      uppercaseHint.classList.toggle("text-green-600", /[A-Z]/.test(val));
+      uppercaseHint.classList.toggle("text-blue-600", /[A-Z]/.test(val));
       uppercaseHint.classList.toggle("text-red-600", !/[A-Z]/.test(val));
 
-      lowercaseHint.classList.toggle("text-green-600", /[a-z]/.test(val));
+      lowercaseHint.classList.toggle("text-blue-600", /[a-z]/.test(val));
       lowercaseHint.classList.toggle("text-red-600", !/[a-z]/.test(val));
 
-      digitHint.classList.toggle("text-green-600", /\d/.test(val));
+      digitHint.classList.toggle("text-blue-600", /\d/.test(val));
       digitHint.classList.toggle("text-red-600", !/\d/.test(val));
     });
   </script>
